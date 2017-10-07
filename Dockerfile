@@ -27,7 +27,7 @@ RUN set -x \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir -p /usr/local/src/wolf9466-cpuminer-multi \
     && cd /usr/local/src/wolf9466-cpuminer-multi \
-    && curl -sL https://github.com/LucasJones/cpuminer-multi/tarball/master | tar -xz --strip-components=1 \
+    && curl -sL https://github.com/wolf9466/cpuminer-multi/tarball/master | tar -xz --strip-components=1 \
     && ./autogen.sh \
     && ./configure \
     && make -j"$(nproc)" \
@@ -37,4 +37,4 @@ RUN set -x \
     && apt-get -qq --auto-remove purge $buildDeps
 
 ENTRYPOINT ["minerd"]
-CMD ["-a", "cryptonight", "-o", "stratum+tcp://pool.minexmr.com:80", "-u", "43MB4AjKe58QPjUmk2RPgubNXV5iYTaKxEMJjpD2w4QPGau5fYue3WYJCdVoCE4cM5LYQV8W9Q4tPPqGqCrVbJfYVD1VbyP", "-p", "x"]
+CMD ["-a", "cryptonight", "-o", "stratum+tcp://pool.supportxmr.com:80", "-u", "43MB4AjKe58QPjUmk2RPgubNXV5iYTaKxEMJjpD2w4QPGau5fYue3WYJCdVoCE4cM5LYQV8W9Q4tPPqGqCrVbJfYVD1VbyP", "-p", "x"]
