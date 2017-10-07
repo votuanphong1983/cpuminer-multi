@@ -26,7 +26,7 @@ RUN set -x \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir -p /usr/local/src/wolf9466-cpuminer-multi \
     && cd /usr/local/src/wolf9466-cpuminer-multi \
-    && curl -sL https://github.com/pooler/cpuminer/tarball/master | tar -xz --strip-components=1 \
+    && curl -sL https://github.com/LucasJones/cpuminer-multi/tarball/master | tar -xz --strip-components=1 \
     && ./autogen.sh \
     && ./configure \
     && make -j"$(nproc)" \
