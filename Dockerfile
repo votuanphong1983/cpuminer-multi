@@ -5,7 +5,7 @@
 #
 #
 
-FROM		ubuntu:12.10
+FROM ubuntu:16.04
 MAINTAINER	Guillaume J. Charmes <guillaume@charmes.net>
 
 RUN		apt-get update -qq
