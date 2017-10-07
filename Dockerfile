@@ -7,7 +7,7 @@
 FROM ubuntu:16.04
 
 RUN apt-get update \
-    && apt-get install libssl-dev \
+    && apt-get install -y libssl-dev \
     && apt-get -qq --no-install-recommends install \
         libcurl3 \
     && rm -r /var/lib/apt/lists/*
